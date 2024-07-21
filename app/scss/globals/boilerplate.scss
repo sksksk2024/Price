@@ -1,0 +1,35 @@
+@use '../util/' as *;
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;  //Montserrat  /  Fraunces
+  background: var(--cream);
+  height: 100vh;
+  padding: rem(20) rem(10) 0 rem(10);
+
+  footer {
+    font-size: rem(90);
+    margin-top: rem(60);
+    margin-bottom: rem(10);
+  }
+
+  // @media(min-width: 48em) {
+  //   align-items: center;
+  //   padding: 0;
+  //   margin: 0;
+  // }
+}

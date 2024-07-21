@@ -1,0 +1,25 @@
+@use '../util' as *;
+
+h1,
+h2,
+h3 {
+  font-family: 'Fraunces', sans-serif;
+  margin-top: 0;
+  margin-bottom: rem(10);
+  line-height: 1.1;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+a,
+a:visited,
+a:hover {
+  cursor: pointer;
+}
+
+p {
+  line-height: 1.5;
+  font-size: rem(14);
+}

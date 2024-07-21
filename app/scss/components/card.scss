@@ -1,0 +1,131 @@
+@use '../util/' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  background: var(--white);
+  width: auto;
+  padding: 0;
+  font-size: rem(14);
+  border-radius: 0.5rem;
+  
+  &__name,
+  &__price,
+  &__rprice,
+  h1,
+  &__button,
+  p {
+    padding: rem(5) rem(20) rem(5) rem(20);
+  }
+  
+  &__img1 {
+    width: 100%;
+    border-top-left-radius: 0.5rem;
+
+    @media (max-width: 48em) {
+      border-top-right-radius: 0.5rem;
+    }
+  }
+
+  &__img2 {
+    display: none;
+  }
+  
+  &__name {
+    font-size: rem(12);
+    margin-top: rem(10);
+    text-transform: uppercase; /* Converts text to uppercase */
+    letter-spacing: rem(5); /* Adds 1em space between each character */
+    color: var(--dkgrayishblue);
+  }
+  
+  // h1 {
+  // }
+  
+  p {
+    margin-top: rem(-5);
+    margin-bottom: rem(5);
+    color: var(--dkgrayishblue);
+  }
+
+  &__box {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    margin-bottom: rem(-10);
+  }
+  
+  &__price {
+    font-size: xx-large;
+    font-family: Fraunces;
+    color: var(--dkcyan);
+    margin-right: rem(-20); /* Add margin to create space between the price and rprice */
+  }
+  
+  &__rprice {
+    font-size: rem(12);
+    text-decoration-line: line-through;
+    color: var(--dkgrayishblue);
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 4vh;
+    margin: rem(20) auto;
+    background: var(--dkcyan);
+    border-radius: 0.5rem;
+    position: relative;
+    
+    img {
+      position: relative;
+      bottom: rem(1);
+      left: rem(2);
+      width: rem(16);
+      height: rem(15);
+    }
+    
+    h2 {
+      position: relative;
+      left: rem(10);
+      top: rem(5);
+      font-size: rem(14);
+      color: var(--white);
+    }
+
+    &:hover {
+      cursor: pointer;
+      background: var(--verydkblue);
+    }
+  }
+
+  @media (min-width: 48em) {    
+    flex-direction: row; /* Changes the flex direction to row for desktop */
+    align-items: stretch; /* Aligns items vertically stretch */
+    width: rem(500);
+
+    &__img1 {
+      display: none;
+    }
+
+    &__img2 {
+      height: rem(250);
+      width: rem(250);
+      display: block;
+      height: auto; /* Keep aspect ratio */
+      border-bottom-left-radius: 0.5rem; /* Rounds bottom-left corner */
+      border-top-left-radius: 0.5rem; /* Rounds top-left corner */
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      padding: rem(16);
+    }
+
+  }
+}
